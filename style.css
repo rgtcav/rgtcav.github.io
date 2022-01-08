@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    padding: 50px 100px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: sticky;
+    
+    background: linear-gradient(rgba(11, 8, 46, 0.671),transparent), url(res/img/tech.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-size: 100%;
+    background-clip:border-box;
+
+    color: white;
+
+    transition: background-size.5s;
+    top:0;
+}
+
+.head-text2{
+    font-size: 300%;
+    text-shadow: 0px 0px 10px #0d0627;
+}
+
+footer{
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    background:black;
+    color:white;
+    text-align: center; 
+}
+
+.ico{
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+    text-decoration: none;
+    font-size: 10px;
+    color: whitesmoke;
+}
+
+.vk{
+    background: url(res/img/vk.png);
+    background-size: 100% 100%;
+}
+
+.ds{
+    background: url(res/img/Discord.png);
+    background-size: 100% 100%;
+}
+
+.gm{
+    background: url(res/img/Gmail.png);
+    background-size: 100% 100%;
+}
+
+.contacts{
+    display:flex;
+    justify-content: space-around;
+    align-content: center;
+    vertical-align: bottom;
+}
+
+.teacher{
+    margin-bottom: 10px;
+}
+
+.head:hover{
+    background-size: 110%;
+}
+
+.main{
+    background:#292a36;
+    width: 100%;
+    max-height: 100%;
+    min-height: 78vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.block{
+    background:#6372b4;
+    border-radius: 15px;
+    min-height: 200px;
+    width: 500px;
+    margin:15px;
+    box-shadow: rgba(0, 0, 0, 0.233) 0px 0px 20px;
+    
+}
+
+.title-block{
+    border-radius: 15px 15px 0px 0px;
+    background: #c2cdfd;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.ol-block{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.ol-block li{
+    margin: 10px;
+}
+
+.ol-block li a{
+    text-decoration: none;
+    color: black;
+    background:rgba(255, 255, 255, 0.301);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:500px) {
+    .head{
+        width: 150x;
+        padding: 5px 0px;
+        height: 125px;
+        justify-content: space-around;
+    }
+    .head-text2{
+        font-size: 25px;
+    }
+
+    .teacher{
+        font-size: 15px;
+    }
+
+    .contacts div a{
+        width: 25px;
+        height: 25px;
+        line-height: 55px;
+        font-size: 10px;
+    }
+
+    .block{
+        font-size: 15px;
+    }
+    
+    .title-block{
+        font-size: 25px;
+    }
+
+    .ol-block{
+        margin: 5px;
+    }
+
+    .ol-block li{
+        margin: 5px;
+    }
+
+    .head-text1{
+        font-size: 20px;
+    }
+}
