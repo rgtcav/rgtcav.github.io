@@ -16,7 +16,7 @@ body{
     flex-wrap: wrap;
     position: sticky;
     
-    background: linear-gradient(rgba(11, 8, 46, 0.671),transparent), url(res/img/tech.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.671),transparent), url(res/img/tech.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-blend-mode: multiply;
