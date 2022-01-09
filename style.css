@@ -132,6 +132,7 @@ footer{
     background:rgba(255, 255, 255, 0.301);
     border-radius: 5px;
     font-weight: bold;
+    padding: 0px 10px;
 }
 
 @media screen and (max-width:500px) {
