@@ -1,11 +1,11 @@
 * {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
 body{
     background-color: #292a36;
-    counter-reset: section picture;
+    counter-reset: picture stepn;
 }
 
 figcaption::before{
@@ -19,12 +19,10 @@ p{
     line-height: 25px;
 }
 
-h1, h2, h3{
+h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 20px;
     margin-bottom: 15px;
-}
-h1{
     border-bottom: 3px solid black;
     padding: 5px;
     text-align: center;
@@ -32,28 +30,6 @@ h1{
 }
 h1:first-child{
 padding-top: 0px;
-}
-h2{
-    background-color: white;
-    border-radius: 30px;
-    padding-top: 15px;
-    margin-top: 15px;
-}
-h2::before{
-    counter-increment: section;
-    content:"🙂" counter(section) " | ";
-}
-h3{
-    font-size: 25px;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.774);
-    border-radius: 30px;
-    width:70%;
-    text-align: center;
-    margin:15px auto 15px;
-}
-h3::before{
-content: "• ";
 }
 
 figure{
@@ -81,19 +57,7 @@ figure img{
     text-align: justify;
 }
 
-.small-list{
-    margin-top: -15px;
-    margin: 0 auto 20px;
-    line-height: 25px;
-    width: 80%;
-}
-
-.list{
-    margin-top: -15px;
-    margin: 0 auto 20px;
-}
-
-.all-list li{
+ul{
     margin-bottom: 15px;
 }
 
@@ -191,9 +155,7 @@ height: 70px;
     padding: 15px;
     margin-top: 15px;
 }
-.h_node *{
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 .h_node:first-child{
     margin: 0px;
 }
@@ -233,6 +195,33 @@ height: 70px;
 .h_node .h_node_area .node_header{
     font-weight: bold;
     margin: 0px 0px 15px 0px;
+}
+
+.step{
+    counter-increment: stepn;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: stretch;
+    border-color: gray;
+    border-bottom: 3px dotted gray;
+    padding: 10px;
+}
+.step .step_number{
+    background-color: #ffffff;
+    display: flex;
+    font-weight: 700;
+    height: 70px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.step .step_number::after{
+    content: "Шаг" " " counter(stepn);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 
@@ -277,13 +266,19 @@ height: 70px;
     .h_node img{
         width: 35px;
         height: 35px;
+    }
+    .step .step_number{
+        width: 70px;
+        padding: 5px;
+        margin: 5px;
+    }
 }
 
 @media print{
     .header-div{
         display:none;
     }
-    .conspect_area{
+    .practical_area{
         margin-top: 0;
     }
     .h_node{
